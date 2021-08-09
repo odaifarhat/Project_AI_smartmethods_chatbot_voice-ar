@@ -27,7 +27,7 @@ gTTS
 
 # Its current capabilities:
 
-# 1: Introduce herself and remember the name of the speaker.
+Introduce herself and remember the name of the speaker.
 
   # 1: الإسم= Name
     if there_exists(["من تكونين","ما هو اسمك","ماهو اسمك ","ما اسمك ","من أنتي","من أنت"]):
