@@ -27,9 +27,11 @@ gTTS
 
 # Its current capabilities:
 
-Introduce herself and remember the name of the speaker.
 
   # 1: الإسم= Name
+  
+  Introduce herself and remember the name of the speaker.
+
     if there_exists(["من تكونين","ما هو اسمك","ماهو اسمك ","ما اسمك ","من أنتي","من أنت"]):
          if person_obj.name:
             smartmethods_speak("أنا سيلين مساعدة الأساليب الذكية")
@@ -41,10 +43,11 @@ Introduce herself and remember the name of the speaker.
         smartmethods_speak(f"حسناً سوف أتذكرك دائماً   {person_name}")
         person_obj.setName(person_name)  # remember name in person object
 
-# 2: She can receive and respond to greetings.
 
+ # 2: التحية=Greeting.
+ 
+ She can receive and respond to greetings.
 
- # 2: التحية=Greeting
     if there_exists([" هلا  "," سلام  ","  السلام عليكم "," مرحبا"]): 
         smartmethods_speak(f"  أهلا وسهلا ومرحبا بك في شركة الأساليب الذكية , كيف أساعدك؟ ")
 
@@ -54,36 +57,44 @@ Introduce herself and remember the name of the speaker.
     if there_exists(["بأفضل حال ","أشكر الله ","بخير ","الحمدلله"]):
         smartmethods_speak(f"    إن شاء الله دائماً   {person_obj.name}  كيف أساعدك؟")
 
-# 3: She can help you with services.
 
+# 3: الخدمات=Serves.
 
-# 3: الخدمات=Serves 
+She can help you with services.
+
     if there_exists([" ماذا تفعلين ","ماهي خدماتك  "," ماذا تقدمين لي","ماذا تصنعين"]):
         smartmethods_speak(f"  أنا هنا للترحيب بكم بإسم شركة الأساليب الذكية ")
         
-        
-# 4: She can reply thanks.       
-        
-# 4: الشكر= Thanks        
+                
+# 4: الشكر= Thanks.
+
+She can reply thanks.       
+
     if there_exists(["  أشكرك "," شكرا جزيلا  "," شكرا  "," شكراً لك"]):
         smartmethods_speak(f" العفو أنا هنا لخدمتكم , نحن الذين نشكرك لحضوركم الكريم {person_obj.name}  ")
 
-# 5: She can tell a joke.
 
-# 5: نكتة = Joke  
+# 5: نكتة = Joke.
+
+She can tell a joke.
+
     if ' نكتة ' in voice_data:
         smartmethods_speak(pyjokes.get_joke())
 
-# 6: She can introduce the company.
 
-# 6: تعريف بالشركة = Company Introduction
+# 6: تعريف بالشركة = Company Introduction.
+
+ She can introduce the company.
+
     if there_exists(["  من هي شركة الأساليب ","  ماذا تصنع الأساليب الذكية  ","  ماخدمات الأساليب الذكية "," من هي الأساليب الذكية "]):
         smartmethods_speak(f" شركة الأساليب الذكية مؤسسة وطنية سعودية متخصصة في مجال الروبوت والذكاء الصناعي ونفخر بحصولنا على تصنيف فوربس كواحدة من أكثر الشركات ابداعا ونفخر أيضا بترشيحنا من قبل المنشئات كواحدة من أكثر الشركات ابتكارا في عام 2020 ")
 
 
-# 7: She can search in Google, YouTube and Google Map.
 
-# 7:  البحث = Search google & Youtube & location
+# 7:  البحث = Search google & Youtube & location.
+
+She can search in Google, YouTube and Google Map.
+
 
     if 'ابحث في جوجل' in voice_data:
         search = record_audio('ماذا تريد أن أبحث ؟')
@@ -103,9 +114,12 @@ Introduce herself and remember the name of the speaker.
         webbrowser.get().open(url)
         smartmethods_speak('هنا الموقع ' + location + "في خرائط جوجل")
         
-# 8: She can stop.
+        
+# 8:  إغلاق= Close.
 
-# 8:  إغلاق= Close
+She can stop.
+
     if there_exists([" وداع  "," إغلاق  "," توقفي  ","إلى اللقاء"]):
         smartmethods_speak(f"   حسنا إلى اللقاء وليس وداعاً , أراك بخير {person_obj.name} ")
       
+
