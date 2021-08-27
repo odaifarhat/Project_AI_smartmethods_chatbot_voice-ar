@@ -1,6 +1,6 @@
 # Project_AI_smartmethods_chatbot_voice-ar
 
-It's Celine Voice Assist's smart methods of helping, welcoming, and delivering company services and can be programmed to do more.
+It is Celine Voice Assistant in Arabic of helping, welcoming, and delivering company services  and can be programmed to do more.
 
 # Used pip install to install these libraries:
 
